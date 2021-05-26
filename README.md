@@ -22,6 +22,11 @@ sh image.sh
 
 kubeadm init --config=kubeadm-master.config
 
+复制配置文件使得可以通过命令行查看k8s状态，如kubectl get nodes
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 # 4.kube-flannel.yml
 
 安装网络插件，使master节点由notready转为ready
