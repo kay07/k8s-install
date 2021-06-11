@@ -15,6 +15,7 @@ yum install -y kubectl-1.19.2 kubeadm-1.19.2 kubelet-1.19.2
 执行文件下载镜像
 
 sh image.sh
+也可不使用这个，因为在第三步中已经配置好了要使用的镜像，镜像不改名也可以的
 
 # 3.kubeadm-master.config
 
